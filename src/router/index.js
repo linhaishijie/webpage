@@ -1,62 +1,57 @@
-import VueRouter from 'vue-router'
+import Vue from 'vue'
+import Router from 'vue-router'
 
-import ProjectIntroduce from '../pages/ProjectIntroduce.vue'
-import TeachersIntroduce from '../pages/TeachersIntroduce.vue'
-import ExperimentalGuide from '../pages/ExperimentalGuide.vue'
-import CourseMaterials from '../pages/CourseMaterials.vue'
-import ExperimentalResources from '../pages/ExperimentalResources.vue'
-import AssessmentRequirement from '../pages/AssessmentRequirement.vue'
-import ExcellentCase from '../pages/ExcellentCase.vue'
-import LearningRecord from '../pages/LearningRecord.vue'
-import QuestionsAnswers from '../pages/QuestionsAnswers.vue'
-import DataAnalysis from '../pages/DataAnalysis.vue'
-import CurriculumReview from '../pages/CurriculumReview.vue'
+Vue.use(Router)
 
-export default new VueRouter({
+export default new Router({
     routes: [
         {
-            path: '/ProjectIntroduce' || '/',
-            component: ProjectIntroduce
+            path: "/",
+            redirect: "/ProjectIntroduce",
+        },
+        {
+            path: '/ProjectIntroduce',
+            component: () => import('../views/ProjectIntroduce')
         },
         {
             path: '/TeachersIntroduce',
-            component: TeachersIntroduce
+            component: () => import('../views/TeachersIntroduce')
         },
         {
             path: '/ExperimentalGuide',
-            component: ExperimentalGuide
+            component: () => import('../views/ExperimentalGuide')
         },
         {
             path: '/CourseMaterials',
-            component: CourseMaterials
+            component: () => import('../views/CourseMaterials')
         },
         {
             path: '/ExperimentalResources',
-            component: ExperimentalResources
+            component: () => import('../views/ExperimentalResources')
         },
         {
             path: '/AssessmentRequirement',
-            component: AssessmentRequirement
+            component: () => import('../views/AssessmentRequirement')
         },
         {
             path: '/ExcellentCase',
-            component: ExcellentCase
+            component: () => import('../views/ExcellentCase')
         },
         {
             path: '/LearningRecord',
-            component: LearningRecord
+            component: () => import('../views/LearningRecord')
         },
         {
             path: '/QuestionsAnswers',
-            component: QuestionsAnswers
+            component: () => import('../views/QuestionsAnswers')
         },
         {
             path: '/DataAnalysis',
-            component: DataAnalysis
+            component: () => import('../views/DataAnalysis')
         },
         {
             path: '/CurriculumReview',
-            component: CurriculumReview
+            component: () => import('../views/CurriculumReview')
         }
     ]
 })

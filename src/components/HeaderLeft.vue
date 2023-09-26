@@ -1,8 +1,6 @@
 <template>
   <div class="HeaderLeft">
-    <img
-      src="https://image.zhihuishu.com/zhs/zhihuishu_virtual_h5/BASICLNFOSOURSENAME/202204/7e262bc13b2a4375b8ae91bef2f3d3cf.png"
-    />
+    <img src="@/assets/advertisement.png" />
   </div>
 </template>
 
@@ -14,6 +12,7 @@ export default {};
 .HeaderLeft {
   flex: 40%;
   margin-right: 1.25rem;
+
   img {
     float: left;
     width: 100%;
